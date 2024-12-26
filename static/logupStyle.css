@@ -1,0 +1,150 @@
+@keyframes buttonSwell {
+    from{width: 50%; height: 50px;}
+    to{width: 54%; height: 54px;}
+}
+
+@keyframes buttonShrink{
+    from{width: 54%; height: 54px;}
+    to{width: 50%; height: 50px;}
+}
+
+@keyframes titleHover{
+    from{top: 5px;}
+    to{top: 10px;}
+}
+
+@keyframes divSwell{
+    from{width: 43%; height: 480px;}
+    to{width: 44%; height: 481px;}
+}
+
+@keyframes divShrink{
+    from{width: 44%; height: 481px;}
+    to{width: 43%; height: 480px;}
+}
+
+@keyframes bgLoop{
+    to{background-position: 0 131vh;}
+}
+
+body{
+    background-color: #6e1513;
+    background-image: url("startexture.png");
+    animation: bgLoop;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-direction: normal;
+    animation-timing-function: linear;
+}
+
+
+h1{
+    display: block;
+    color: #f5a696;
+    text-align: center;
+    font-size: 300%;
+    position: relative;
+    animation: titleHover;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate-reverse;
+    font-family: "Abril Fatface", serif;
+    font-weight: 800;
+}
+
+.innerContainer{
+    background-color: #0C0C0C;
+    width: 43%;
+    height: 480px;
+    box-sizing: border-box;
+    padding: 5px;
+    outline-style:double;
+    outline-width: 5px;
+    outline-color: #969190;
+}
+
+.innerContainer:hover{
+    width: 44%;
+    height: 481px;
+    animation: divSwell;
+    animation-duration: 0.2s;
+}
+
+.innerContainer:not(:hover){
+    animation: divShrink;
+    animation-duration: 0.2s;
+    width: 43%;
+    height: 480px;
+}
+
+.flexContainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+
+h3{
+    color: #F6F0ED;
+    text-decoration: underline;
+    font-size: 180%;
+    text-align: center;
+    font-family: "Abril Fatface", serif;
+    font-weight: 400;
+}
+
+
+label{
+    color: #e0dad7;
+    font-size: 150%;
+    font-family: "Libre Baskerville", serif;
+
+}
+
+input{
+    width: 100%;
+    height: 40px;
+    font-family: "Courier Prime", serif;
+}
+
+.doubleContainer{
+    width: 90%;
+    margin: auto;
+}
+
+button{
+    width: 50%;
+    height: 50px;
+    margin-top: 100px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 120%;
+    background-color: #F6F0ED;
+    color:#0C0C0C;
+    border-style: none;
+    font-family: "Abril Fatface", serif;
+    font-weight: 200;
+}
+
+button:hover{
+    background-color:#736d6c;
+    color: #F6F0ED;
+    width: 54%;
+    height: 54px;
+    animation: buttonSwell;
+    animation-duration: 0.1s;
+}
+
+button:not(:hover){
+    animation: buttonShrink;
+    animation-duration: 0.1s;
+    width: 50%;
+    height: 50px;
+}
+
+p{
+    text-align: center;
+    color: white;
+    font-size: 20px;
+}

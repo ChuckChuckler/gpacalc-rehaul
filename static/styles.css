@@ -1,0 +1,191 @@
+@keyframes buttonSwell{
+    from{height: 40px; width: 30%;}
+    to{height: 41px; width: 31%;}
+}
+
+
+@keyframes buttonShrink{
+    from{height: 41px; width: 31%;}
+    to{height: 40px; width: 30%;}
+}
+
+@keyframes tableSwell{
+    from{height: 60%; width: 80%;}
+    to{height: 61%; width: 81%;}
+}
+
+@keyframes tableShrink{
+    from{height: 61%; width: 81%;}
+    to{height: 60%; width: 80%;}
+}
+
+@keyframes inputSwell{
+    from{width: 100%; height: 30px;}
+    to{width: 102%; height: 32px;}
+}
+
+@keyframes inputShrink{
+    from{width: 102%; height: 32px;}
+    to{width: 100%; height: 30px;}
+}
+
+body{
+    background-color: #6e1513;
+}
+
+
+h1{
+    color: #f5a696;
+    text-align: center;
+    font-size: 300%;
+    text-decoration: underline;
+    font-family: "Abril Fatface", serif;
+    font-weight: 800;
+}
+
+h3{
+    text-align: center;
+    color:#e79e8f;
+    font-size: 150%;
+    position: relative;
+    bottom: 20px;
+    font-family: "Libre Baskerville", serif;
+}
+
+p{
+    text-align: center;
+    color: #f5a696;
+}
+
+.tableHolder{
+    height: 60%;
+    width: 80%;
+    margin: auto;
+    overflow-y: scroll;
+    background-color: #0c0c0c;
+    box-sizing: border-box;
+    padding-top: 25px;
+    outline-style:groove;
+    outline-width: 5px;
+    outline-color: #969190;
+}
+
+.tableHolder:hover{
+    animation: tableSwell;
+    animation-duration: 0.5s;
+    width: 81%;
+    height: 61%;
+}
+
+.tableHolder:not(:hover){
+    animation: tableShrink;
+    animation-duration: 0.5s;
+    width: 80%;
+    height: 60%;
+}
+
+th{
+    color:#F6F0ED;
+    font-family: "Libre Baskerville", serif;
+}
+
+.td1{
+    width: 400px;
+}
+
+.td2{
+    width: 170px;
+}
+
+input{
+    width: 100%;
+    height: 30px;
+}
+
+input:hover{
+    animation: inputSwell;
+    animation-duration: 0.5s;
+    width: 102%; 
+    height: 32px;
+}
+
+input:not(:hover){
+    animation: inputShrink;
+    animation-duration: 0.5s;
+    width: 100%;
+    height: 30px;
+}
+
+select{
+    width: 100%;
+    height: 30px;
+}
+
+select:hover{
+    animation: inputSwell;
+    animation-duration: 0.5s;
+    width: 102%; 
+    height: 32px;
+}
+
+select:not(:hover){
+    animation: inputShrink;
+    animation-duration: 0.5s;
+    width: 100%;
+    height: 30px;
+}
+
+.bodyHolder{
+    display: none;
+}
+
+table{
+    margin: auto;
+}
+
+.initialCreateBtn{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.btnHolder{
+    text-align: center;
+}
+
+input{
+    font-family: 'Courier New', Courier, monospace;
+}
+
+select{
+    font-family: 'Courier New', Courier, monospace;
+}
+
+button{
+    background-color: #f5a696;
+    border-style: solid;
+    border-color:#0c0c0c;
+    border-width: 0.5px;
+    color:#6e1513;
+    height: 40px;
+    width: 30%;
+    font-family: "Abril Fatface", serif;
+    font-weight: 100;
+    font-size: 1.8vw;
+}
+
+button:hover{
+    background-color:#3d1010;
+    color: white;
+    width: 31%;
+    height: 41px;
+    animation: buttonSwell;
+    animation-duration: 0.5s;
+}
+
+button:not(:hover){
+    animation: buttonShrink;
+    animation-duration: 0.5s;
+    height: 40px;
+    width: 30%;
+}
