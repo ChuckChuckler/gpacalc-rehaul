@@ -15,4 +15,4 @@ Simply sign up and log in with any username and password. To create a new class,
 
 ## Link
 
-[The link for GPACalc can be found here.](https://avishis3939.pythonanywhere.com/main)
+[The link for GPACalc can be found here.](https://avishis3939.pythonanywhere.com)
