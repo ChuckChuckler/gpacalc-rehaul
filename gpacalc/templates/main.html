@@ -1,0 +1,42 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GPACalc-- Main</title>
+    <link href="/static/styles.css" rel="stylesheet" type="text/css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+</head>
+<body>
+    <h1>Main</h1>
+    <h3 id="user"></h3>
+    <p id="infomsg"></p>
+    <button onclick="create()" id="initialCreateBtn" class="initialCreateBtn">Create Class</button>
+    <div class="bodyHolder" id="bodyHolder">
+        <div class="tableHolder">
+            <table id="classesTable">
+                <tr>
+                    <th>Class Name</th>
+                    <th>Class Difficulty</th>
+                    <th>Grade</th>
+                    <th>Class Length</th>
+                </tr>
+            </table>
+        </div>
+        <br>
+        <h3 id="gpaDisp"></h3>
+        <div class="btnHolder">
+            <button onclick="calc()">Calculate Weighted GPA</button>
+            <button onclick="save()">Save</button>
+            <button onclick="create()">Create Class</button>
+        </div>
+    </div>
+    <script src="/static/script.js"></script>
+    <script>
+        window.onload = () => {
+            setup({{user|tojson}}, {{classes|tojson}});
+        }
+    </script>
+</body>
+</html>
